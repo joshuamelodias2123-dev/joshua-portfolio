@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Joshua Melodias</title>
+  <meta name="description" content="Resume of Joshua Melodias — marketing student, AI automation, and administration. Edmonton, Alberta.">
+  <meta name="robots" content="noindex"><!-- resumes don't need to rank in search -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Print-first resume: the "Save as PDF" button uses the browser's print
+       dialog, which produces a clean one-page PDF from this exact layout. */
+    :root {
+      --ink: #1a1f1e;
+      --soft: #4c5553;
+      --accent: #b4512e;
+      --line: #e5e0d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--ink);
+      background: #efece6;
+      line-height: 1.55;
+      font-size: 15px;
+    }
+    .toolbar {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .toolbar a, .toolbar button {
+      font: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .toolbar a { color: var(--ink); text-decoration: none; }
+    .toolbar a:hover { color: var(--accent); }
+    .btn-print {
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.65rem 1.4rem;
+      cursor: pointer;
+    }
+    .btn-print:hover { background: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .page {
+      max-width: 800px;
+      margin: 1.25rem auto 3rem;
+      background: #fff;
+      padding: 3rem 3.25rem;
+      box-shadow: 0 10px 40px -18px rgb(26 31 30 / 25%);
+    }
+    header.head { border-bottom: 3px solid var(--ink); padding-bottom: 1.25rem; }
+    h1 { font-family: "Space Grotesk", sans-serif; font-size: 2.1rem; letter-spacing: -0.02em; }
+    .role { color: var(--accent); font-weight: 600; margin-top: 0.2rem; }
+    .contact-line { margin-top: 0.6rem; color: var(--soft); font-size: 0.9rem; }
+    .contact-line a { color: var(--soft); }
+
+    h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin: 1.75rem 0 0.75rem;
+    }
+    .entry { margin-bottom: 1rem; }
+    .entry-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .entry-head strong { font-size: 1rem; }
+    .entry-head .date { color: var(--soft); font-size: 0.88rem; white-space: nowrap; }
+    .entry .org { color: var(--soft); font-size: 0.92rem; }
+    .entry ul { margin: 0.4rem 0 0 1.1rem; color: var(--soft); font-size: 0.92rem; }
+    .entry ul li { margin-bottom: 0.2rem; }
+
+    .skills-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 2rem; }
+    .skills-cols p { font-size: 0.92rem; margin-bottom: 0.35rem; }
+    .skills-cols strong { font-size: 0.92rem; }
+    .summary { color: var(--soft); margin-top: 1rem; }
+
+    @media (max-width: 640px) {
+      .page { padding: 2rem 1.5rem; }
+      .skills-cols { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #fff; font-size: 13px; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; margin: 0; max-width: none; padding: 0.5in 0.6in; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="index.html">&larr; Back to portfolio</a>
+    <button class="btn-print" onclick="window.print()">Save as PDF / Print</button>
+  </div>
+
+  <main class="page">
+    <header class="head">
+      <h1>Joshua Melodias</h1>
+      <p class="role">Marketing · AI Automation · Administration</p>
+      <p class="contact-line">
+        Edmonton, Alberta, Canada ·
+        <a href="mailto:joshua.melodias2123@gmail.com">joshua.melodias2123@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/joshua-melodias">linkedin.com/in/joshua-melodias</a>
+      </p>
+    </header>
+
+    <p class="summary">
+      Marketing student with a healthcare background in quality assurance and administration.
+      Combines clinical-grade attention to detail with practical skills in digital marketing,
+      content creation, spreadsheets, and AI automation. Reliable, organized, and fast to learn
+      new tools.
+    </p>
+
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <strong>Business Administration – Marketing Diploma</strong>
+        <span class="date">2025 – Present</span>
+      </div>
+      <p class="org">NAIT — Northern Alberta Institute of Technology, Edmonton, AB</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <strong>Bachelor of Science in Respiratory Therapy</strong>
+        <span class="date">Completed</span>
+      </div>
+      <p class="org">Healthcare sciences — clinical training and patient care</p>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <strong>Freelance Brand &amp; Web Designer</strong>
+        <span class="date">2026 – Present</span>
+      </div>
+      <p class="org">Everwell Therapeutic Massage — Regina, SK (remote)</p>
+      <ul>
+        <li>Sole strategist, copywriter, and designer for a deep-tissue and cupping clinic's brand and website</li>
+        <li>Developed positioning, tagline, colour and type system, and a conversion-focused landing page</li>
+        <li>Wrote all site copy targeting people in real pain, with insurance direct-billing messaging</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <strong>Healthcare Quality Assurance &amp; Administration</strong>
+        <span class="date">Previous</span>
+      </div>
+      <p class="org">Healthcare sector</p>
+      <ul>
+        <li>Audited clinical records and documentation for accuracy and compliance</li>
+        <li>Built and maintained tracking spreadsheets and reports in Excel</li>
+        <li>Supported scheduling, correspondence, and day-to-day office administration</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <strong>Customer Service Representative</strong>
+        <span class="date">Previous</span>
+      </div>
+      <p class="org">Service industry</p>
+      <ul>
+        <li>Handled customer requests and complaints with a same-day resolution mindset</li>
+      </ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skills-cols">
+      <p><strong>Marketing:</strong> digital marketing, copywriting, brand strategy, social content, campaign coordination</p>
+      <p><strong>AI &amp; automation:</strong> ChatGPT, Claude, n8n workflows, prompt design, process automation</p>
+      <p><strong>Data:</strong> Microsoft Excel, Google Sheets, basic SQL, reporting and dashboards</p>
+      <p><strong>Media:</strong> photo editing, video editing, Canva, visual content production</p>
+      <p><strong>Administration:</strong> quality assurance, documentation, scheduling, email management</p>
+      <p><strong>Professional:</strong> customer service, healthcare communication, cross-team coordination</p>
+    </div>
+  </main>
+</body>
+</html>

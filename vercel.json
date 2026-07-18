@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/projects/everwell/:path*",
+      "destination": "/projects/everwell/index.html"
+    }
+  ]
+}
