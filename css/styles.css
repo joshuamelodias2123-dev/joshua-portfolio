@@ -560,6 +560,13 @@ a:hover { color: var(--accent-deep); }
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.project-card .card-media {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin-bottom: 1.1rem;
+}
 .project-card h3 { font-size: 1.15rem; margin-top: 0.55rem; }
 .project-card p { margin-top: 0.7rem; color: var(--ink-soft); font-size: 0.97rem; flex-grow: 1; }
 .project-card .tools {

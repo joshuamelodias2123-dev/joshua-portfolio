@@ -8,8 +8,8 @@ Everything below is either an educated guess or a stand-in you should replace wi
 |---|------|-------|-----------|
 | 1 | **LinkedIn URL** | `index.html` (contact section, 2 places) and `resume.html` | Guessed as `linkedin.com/in/joshua-melodias` — replace with your exact profile URL from LinkedIn → Me → View Profile |
 | 2 | **Live site URL** | `index.html` head — canonical link, `og:url`, `og:image`, `twitter:image` (4 spots) | `https://joshua-melodias.vercel.app/` — replace with the real URL Vercel gives you after deploying |
-| 3 | **Experience details** | `index.html` (Experience timeline) and `resume.html` | Employer names, job titles, and dates for your healthcare QA, admin, and customer service roles are written generically ("Healthcare sector", "Previous"). Add the real employer names, cities, and date ranges |
-| 4 | **Education dates** | `index.html` and `resume.html` | NAIT start year guessed as 2025; Respiratory Therapy marked "Completed" with no school name or years. Fill in the real institution and dates |
+| 3 | ~~Experience details~~ | ✅ Done | Roger (QA, Mar 2023–Jul 2024) and Jades Cargo (Admin Assistant, Jul 2023–Jul 2024) filled in on the site and all resumes |
+| 4 | ~~Education dates~~ | ✅ Done | San Pedro College (grad Mar 2022, licensed Feb 2023) and NAIT 2024–2026 — confirmed by Joshua |
 
 ## 🟡 Should update soon
 
