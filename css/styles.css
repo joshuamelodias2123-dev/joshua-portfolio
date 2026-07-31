@@ -596,6 +596,33 @@ a:hover { color: var(--accent-deep); }
 .media-btn:hover .media-hint,
 .media-btn:focus-visible .media-hint { opacity: 1; }
 
+/* Live carousel preview — an iframe of the real slide deck, scaled down.
+   Keeps the card thumbnail perfectly in sync with the carousel page itself. */
+.carousel-embed {
+  position: relative;
+  display: block;
+  height: 200px;          /* matches the scaled iframe height exactly */
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  margin-bottom: 1.1rem;
+  cursor: zoom-in;
+}
+.carousel-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3400px;          /* wide enough to show ~3 slides; overflow is clipped */
+  height: 1120px;
+  border: 0;
+  transform: scale(0.17857);   /* 1120px × 0.17857 = 200px tall */
+  transform-origin: top left;
+  pointer-events: none;   /* the whole tile is the link */
+}
+.carousel-embed:hover .media-hint,
+.carousel-embed:focus-visible .media-hint { opacity: 1; }
+
 /* --------------------------------------------------------------------------
    Lightbox
    -------------------------------------------------------------------------- */
