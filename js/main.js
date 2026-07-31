@@ -111,6 +111,75 @@
     });
   }
 
+  /* ---------- 5. Lightbox gallery ---------- */
+  // Any .media-btn with data-gallery="img1,img2,..." opens a full-size viewer
+  // with prev/next arrows, Esc to close, and backdrop-click to close.
+  var galleryBtns = document.querySelectorAll(".media-btn[data-gallery]");
+
+  if (galleryBtns.length) {
+    var lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.innerHTML =
+      '<button type="button" class="lb-close" aria-label="Close">✕</button>' +
+      '<button type="button" class="lb-prev" aria-label="Previous image">‹</button>' +
+      '<img src="" alt="">' +
+      '<button type="button" class="lb-next" aria-label="Next image">›</button>' +
+      '<span class="lb-count"></span>';
+    document.body.appendChild(lightbox);
+
+    var lbImg = lightbox.querySelector("img");
+    var lbCount = lightbox.querySelector(".lb-count");
+    var images = [];
+    var label = "";
+    var index = 0;
+    var lastFocus = null;
+
+    var show = function (i) {
+      index = (i + images.length) % images.length;
+      lbImg.src = images[index];
+      lbImg.alt = label + " — image " + (index + 1) + " of " + images.length;
+      lbCount.textContent = (index + 1) + " / " + images.length;
+    };
+
+    var open = function (btn) {
+      images = btn.getAttribute("data-gallery").split(",");
+      label = btn.getAttribute("data-gallery-label") || "Gallery";
+      lastFocus = btn;
+      show(0);
+      lightbox.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      lightbox.querySelector(".lb-close").focus();
+    };
+
+    var close = function () {
+      lightbox.classList.remove("is-open");
+      document.body.style.overflow = "";
+      if (lastFocus) lastFocus.focus();
+    };
+
+    galleryBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () { open(btn); });
+    });
+
+    lightbox.querySelector(".lb-close").addEventListener("click", close);
+    lightbox.querySelector(".lb-prev").addEventListener("click", function () { show(index - 1); });
+    lightbox.querySelector(".lb-next").addEventListener("click", function () { show(index + 1); });
+
+    // Click the dark backdrop (not the image or buttons) to close
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(index - 1);
+      if (e.key === "ArrowRight") show(index + 1);
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());

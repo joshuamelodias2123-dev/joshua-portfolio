@@ -565,7 +565,96 @@ a:hover { color: var(--accent-deep); }
   height: auto;
   border-radius: 10px;
   border: 1px solid var(--line);
+}
+
+/* Clickable media that opens the lightbox gallery */
+.media-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
   margin-bottom: 1.1rem;
+  background: none;
+  border: none;
+  cursor: zoom-in;
+  border-radius: 10px;
+}
+.media-btn .media-hint {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgb(26 31 30 / 72%);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+.media-btn:hover .media-hint,
+.media-btn:focus-visible .media-hint { opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   Lightbox
+   -------------------------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgb(12 15 14 / 92%);
+  padding: 1rem;
+}
+.lightbox.is-open { display: flex; }
+
+.lightbox img {
+  max-width: min(92vw, 1000px);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 24px 80px -20px rgb(0 0 0 / 60%);
+}
+
+.lightbox button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 12%);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.lightbox button:hover { background: var(--accent); }
+.lightbox .lb-close { top: 1rem; right: 1rem; }
+.lightbox .lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox .lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+
+.lightbox .lb-count {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d5d9d7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgb(255 255 255 / 10%);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+}
+
+@media (max-width: 560px) {
+  .lightbox .lb-prev { left: 0.4rem; }
+  .lightbox .lb-next { right: 0.4rem; }
 }
 .project-card h3 { font-size: 1.15rem; margin-top: 0.55rem; }
 .project-card p { margin-top: 0.7rem; color: var(--ink-soft); font-size: 0.97rem; flex-grow: 1; }
