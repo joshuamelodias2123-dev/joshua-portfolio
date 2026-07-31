@@ -331,14 +331,34 @@
             <ul class="tools"><li>Ad design</li><li>Copywriting</li><li>Social media</li><li>Local business</li></ul>
           </article>
           <article class="project-card reveal">
-            <p class="project-tag">Sample project · AI automation</p>
-            <h3>Lead follow-up automation for a service business</h3>
+            <button type="button" class="media-btn" data-gallery="assets/n8n-lead-booking.jpg" data-gallery-label="Lead-to-Booking automation workflow in n8n" aria-label="View the lead-to-booking workflow full size">
+              <img class="card-media" src="assets/n8n-lead-booking.jpg" alt="The n8n canvas for the lead-to-booking automation, showing website and Facebook lead webhooks flowing through qualification, instant reply, calendar booking, three follow-up rounds, and booking confirmation" width="1600" height="815">
+              <span class="media-hint" aria-hidden="true">🔍 Click to view</span>
+            </button>
+            <p class="project-tag">Built · AI automation</p>
+            <h3>Local business lead-to-booking automation</h3>
             <p>
-              An n8n workflow design for a small clinic: when a website enquiry arrives, it's logged
-              to a Google Sheet, an AI-drafted reply is queued for approval, and a follow-up reminder
-              fires after 48 hours if no one responds. No enquiry falls through the cracks.
+              An n8n system that turns an enquiry into a booked appointment with nobody touching it.
+              Website and Facebook leads are captured, qualified, and answered instantly by email and
+              SMS; a calendar slot is proposed and booked; three timed follow-up rounds chase quiet
+              leads and stop the moment someone books; and every lead lands in the tracker.
             </p>
-            <ul class="tools"><li>n8n</li><li>Google Sheets</li><li>Gmail</li><li>Claude API</li></ul>
+            <ul class="tools"><li>n8n</li><li>Twilio SMS</li><li>Gmail</li><li>Google Calendar</li><li>Google Sheets</li></ul>
+          </article>
+          <article class="project-card reveal">
+            <button type="button" class="media-btn" data-gallery="assets/n8n-missed-call.jpg" data-gallery-label="Missed-Call Recovery Agent workflow in n8n" aria-label="View the missed-call recovery workflow full size">
+              <img class="card-media" src="assets/n8n-missed-call.jpg" alt="The n8n canvas for the missed-call recovery agent, showing Twilio call webhooks, a missed-call branch that texts the caller, and an SMS reply branch that calls the Claude API to qualify the lead before sending a booking link" width="1600" height="992">
+              <span class="media-hint" aria-hidden="true">🔍 Click to view</span>
+            </button>
+            <p class="project-tag">Built · AI automation</p>
+            <h3>Missed-call recovery agent</h3>
+            <p>
+              A missed call is a lost customer. Twilio catches the unanswered call and texts the caller
+              within seconds; when they reply, the message goes to Claude to work out what service they
+              need and whether they're qualified. Qualified leads get a booking link, the owner gets an
+              alert, and everything is written to the CRM sheet.
+            </p>
+            <ul class="tools"><li>n8n</li><li>Twilio</li><li>Claude API</li><li>Gmail</li><li>Google Sheets</li></ul>
           </article>
           <article class="project-card reveal">
             <p class="project-tag">Sample project · Data &amp; reporting</p>
@@ -378,21 +398,26 @@
         <div class="services-grid">
           <article class="service-card reveal">
             <p class="num">01</p>
-            <h3>Enquiry &amp; lead follow-up</h3>
-            <p>Every website enquiry gets logged, answered with an approved draft, and followed up automatically — so you stop losing customers to slow replies.</p>
+            <h3>Lead-to-booking automation</h3>
+            <p>Every enquiry gets answered instantly, qualified by AI, and booked into your calendar — with follow-ups that run themselves. Built and working; see the projects above.</p>
           </article>
           <article class="service-card reveal">
             <p class="num">02</p>
+            <h3>Missed-call recovery</h3>
+            <p>Miss a call and the caller gets a text within seconds, asking what they need and sending a booking link. Missed calls stop being lost customers.</p>
+          </article>
+          <article class="service-card reveal">
+            <p class="num">03</p>
             <h3>Review &amp; reputation requests</h3>
             <p>Happy customer? A well-timed, personalized review request goes out automatically. More Google reviews, zero awkward asking.</p>
           </article>
           <article class="service-card reveal">
-            <p class="num">03</p>
+            <p class="num">04</p>
             <h3>Content repurposing</h3>
             <p>One piece of content becomes five: a blog post turns into social captions, an email, and a summary — drafted by AI, polished by a human.</p>
           </article>
           <article class="service-card reveal">
-            <p class="num">04</p>
+            <p class="num">05</p>
             <h3>Admin &amp; reporting automations</h3>
             <p>Weekly reports, appointment reminders, invoice follow-ups, and data entry — moved into workflows that run on schedule without being babysat.</p>
           </article>
