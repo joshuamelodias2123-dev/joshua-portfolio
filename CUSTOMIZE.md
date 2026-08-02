@@ -15,7 +15,7 @@ Everything below is either an educated guess or a stand-in you should replace wi
 
 | # | What | Where | Notes |
 |---|------|-------|-------|
-| 5 | **Everwell live link** | `index.html` (featured project "View the live site" button) | Currently points at the production build bundled in `projects/everwell/` (source: `C:\Users\joshu\rolandwebsite\everwell\everwell`). When Everwell is deployed to its own domain, point the button there instead |
+| 5 | ~~Everwell live link~~ | ✅ Done | The featured project now links to the real live client site, **https://everwellrmt.com**. The older bundled snapshot still sits in `projects/everwell/` but nothing links to it — safe to delete (source project: `C:\Users\joshu\rolandwebsite\everwell\everwell`) |
 | 6 | **Project screenshots** | `index.html` (featured project left panel) | The Everwell preview is drawn with CSS. For extra polish, replace the `project-visual` div with a real screenshot of the finished site |
 | 9 | **Resume PDF** | `resume.html` works as-is via the "Save as PDF" button, but you can also export it once and link a static PDF: put `Joshua-Melodias-Resume.pdf` in `assets/` and change the resume buttons in `index.html` to `href="assets/Joshua-Melodias-Resume.pdf" download` |
 
