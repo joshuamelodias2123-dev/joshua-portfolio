@@ -81,11 +81,11 @@ git push -u origin main
 5. Click **Deploy**. About 30 seconds later your site is live at `https://joshua-portfolio-xxxx.vercel.app`.
 
 ### Step 4 — After deploying
-1. Copy your live URL from Vercel.
-2. In `index.html`, replace `https://joshua-melodias.vercel.app/` (it appears 4 times: canonical link, `og:url`, and the two `og:image`/`twitter:image` URLs) with your real URL.
-3. Re-upload the changed file to GitHub (or `git add . && git commit -m "Update URLs" && git push`). Vercel redeploys automatically on every push.
+This site is already live at **https://joshua-portfolio-wheat.vercel.app/**, and that URL is set in the meta tags and printed on the resumes.
 
-**Optional — nicer address:** In Vercel → your project → **Settings → Domains**, you can rename the free subdomain (e.g. `joshua-melodias.vercel.app`) or connect a custom domain like `joshuamelodias.ca` (~$15/year from a registrar).
+If you ever change the address, update it in `index.html` (4 spots: canonical link, `og:url`, and the two `og:image`/`twitter:image` URLs), then `git add . && git commit -m "Update URLs" && git push`. Vercel redeploys automatically on every push.
+
+**Optional — nicer address:** In Vercel → your project → **Settings → Domains**, you can rename the free subdomain or connect a custom domain like `joshuamelodias.ca` (~$15/year from a registrar).
 
 ---
 

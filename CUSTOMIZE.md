@@ -7,7 +7,7 @@ Everything below is either an educated guess or a stand-in you should replace wi
 | # | What | Where | Currently |
 |---|------|-------|-----------|
 | 1 | **LinkedIn URL** | `index.html` (contact section, 2 places) and `resume.html` | Guessed as `linkedin.com/in/joshua-melodias` — replace with your exact profile URL from LinkedIn → Me → View Profile |
-| 2 | **Live site URL** | `index.html` head — canonical link, `og:url`, `og:image`, `twitter:image` (4 spots) | `https://joshua-melodias.vercel.app/` — replace with the real URL Vercel gives you after deploying |
+| 2 | ~~Live site URL~~ | ✅ Done | Site is live at `https://joshua-portfolio-wheat.vercel.app/` — set in the meta tags and printed on all resumes. If you later rename the domain in Vercel → Settings → Domains, update it in `index.html` (4 spots) and re-export the resumes |
 | 3 | ~~Experience details~~ | ✅ Done | Roger (QA, Mar 2023–Jul 2024) and Jades Cargo (Admin Assistant, Jul 2023–Jul 2024) filled in on the site and all resumes |
 | 4 | ~~Education dates~~ | ✅ Done | San Pedro College (grad Mar 2022, licensed Feb 2023) and NAIT 2024–2026 — confirmed by Joshua |
 
