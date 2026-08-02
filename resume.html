@@ -103,7 +103,10 @@
 <body>
   <div class="toolbar">
     <a href="index.html">&larr; Back to portfolio</a>
-    <button class="btn-print" onclick="window.print()">Save as PDF / Print</button>
+    <span style="display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;">
+      <a class="btn-print" style="text-decoration:none;display:inline-block;" href="assets/Joshua-Melodias-Resume.pdf" download="Joshua-Melodias-Resume.pdf">Download PDF</a>
+      <button class="btn-print" style="background:transparent;color:var(--ink);border:1.5px solid var(--ink);" onclick="window.print()">Print</button>
+    </span>
   </div>
 
   <main class="page">

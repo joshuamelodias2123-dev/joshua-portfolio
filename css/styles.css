@@ -792,6 +792,7 @@ a:hover { color: var(--accent-deep); }
   gap: 1.5rem;
   padding-block: 3rem;
 }
+.resume-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .resume-band h2 { font-size: 1.6rem; }
 .resume-band p { color: var(--ink-soft); margin-top: 0.4rem; }
 
