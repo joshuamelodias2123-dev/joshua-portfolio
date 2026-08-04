@@ -438,18 +438,15 @@ a:hover { color: var(--accent-deep); }
   font-size: 1.02rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.7rem;
   margin-bottom: 1rem;
 }
-.skill-card h3 .glyph {
-  display: inline-grid;
-  place-items: center;
+/* Line icons inherit the accent colour via stroke="currentColor" */
+.skill-card h3 .skill-icon {
   width: 34px;
   height: 34px;
-  border-radius: 9px;
-  background: var(--accent-wash);
+  flex: 0 0 auto;
   color: var(--accent);
-  font-size: 1rem;
 }
 .skill-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .skill-card li {
@@ -477,12 +474,11 @@ a:hover { color: var(--accent-deep); }
 }
 
 .project-block > .media-btn,
-.project-block > .carousel-embed,
-.project-block > .project-visual {
+.project-block > .carousel-embed {
   margin-bottom: 1.6rem;
 }
 
-/* Media fills the column edge to edge */
+/* Media fills the column edge to edge, keeping its own proportions */
 .project-block .card-media {
   width: 100%;
   height: auto;
@@ -542,51 +538,7 @@ a:hover { color: var(--accent-deep); }
   gap: 1.25rem;
 }
 
-/* CSS-drawn preview of the Roland site — replace with a real screenshot when ready */
-.project-visual {
-  background: #1f3a34;
-  color: #f2ede4;
-  padding: clamp(2.5rem, 5vw, 3.75rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.9rem;
-  min-height: 340px;
-  border-radius: 14px;   /* stands alone now, not clipped by a card wrapper */
-}
-/* Real Everwell brand lockup (light-on-dark logo assets) */
-.project-visual .pv-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.5rem;
-}
-.project-visual .pv-brand > img { width: 52px; height: auto; }
-.project-visual .pv-brand-text { display: flex; flex-direction: column; gap: 0.15rem; }
-.project-visual .pv-brand-text img { width: 170px; height: auto; }
-.project-visual .pv-brand-sub {
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #b9c6c0;
-}
-.project-visual .pv-title {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  line-height: 1.15;
-}
-.project-visual .pv-sub { color: #7a9b8e; font-size: 0.95rem; }
-.project-visual .pv-chip-row { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
-.project-visual .pv-chip {
-  font-size: 0.78rem;
-  background: rgb(122 155 142 / 18%);
-  border-radius: 6px;
-  padding: 0.35rem 0.7rem;
-  color: #d9e2de;
-}
 
-.project-body { padding: 2.5rem; }
 .project-tag {
   font-size: 0.78rem;
   font-weight: 700;
@@ -594,8 +546,6 @@ a:hover { color: var(--accent-deep); }
   text-transform: uppercase;
   color: var(--accent);
 }
-.project-body h3 { font-size: 1.5rem; margin-top: 0.5rem; }
-.project-body > p { margin-top: 0.9rem; color: var(--ink-soft); }
 .project-points { list-style: none; margin-top: 1.1rem; display: grid; gap: 0.55rem; }
 .project-points li {
   padding-left: 1.4rem;

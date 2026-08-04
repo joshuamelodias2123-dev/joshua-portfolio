@@ -124,7 +124,7 @@
     lightbox.innerHTML =
       '<button type="button" class="lb-close" aria-label="Close">✕</button>' +
       '<button type="button" class="lb-prev" aria-label="Previous image">‹</button>' +
-      '<img src="" alt="">' +
+      '<img alt="">' +   // no empty src: that would re-request the page
       '<button type="button" class="lb-next" aria-label="Next image">›</button>' +
       '<span class="lb-count"></span>';
     document.body.appendChild(lightbox);
