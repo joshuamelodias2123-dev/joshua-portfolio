@@ -464,28 +464,95 @@ a:hover { color: var(--accent-deep); }
 /* --------------------------------------------------------------------------
    Projects
    -------------------------------------------------------------------------- */
-.project-featured {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--paper-raised);
-  box-shadow: var(--shadow);
-  margin-bottom: 2rem;
+/* --------------------------------------------------------------------------
+   Projects — single-column case-study stack (Behance style).
+   Each project gets a full-width showcase so the work is actually legible.
+   -------------------------------------------------------------------------- */
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 7vw, 6rem);
+  max-width: 920px;
+  margin-inline: auto;
 }
-@media (max-width: 860px) { .project-featured { grid-template-columns: 1fr; } }
+
+.project-block > .media-btn,
+.project-block > .carousel-embed,
+.project-block > .project-visual {
+  margin-bottom: 1.6rem;
+}
+
+/* Media fills the column edge to edge */
+.project-block .card-media {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+.project-block .media-btn { display: block; width: 100%; }
+.project-block .carousel-embed { height: 300px; }   /* 1080px slides × .26 zoom ≈ 281px */
+
+.block-meta { max-width: 76ch; }
+.block-meta .project-tag { margin-bottom: 0.35rem; }
+.block-meta h3 {
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  margin-bottom: 0.75rem;
+}
+.block-meta > p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+.block-meta .tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  list-style: none;
+}
+.block-meta .tools li {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+}
+.block-meta .project-points { margin-top: 1.1rem; }
+.block-meta .project-links { margin-top: 1.6rem; }
+
+/* Compact pair for the smaller, image-less side projects */
+.projects-minor {
+  max-width: 920px;
+  margin: clamp(4rem, 8vw, 6rem) auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.minor-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+.minor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
 
 /* CSS-drawn preview of the Roland site — replace with a real screenshot when ready */
 .project-visual {
   background: #1f3a34;
   color: #f2ede4;
-  padding: 2.75rem 2.5rem;
+  padding: clamp(2.5rem, 5vw, 3.75rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.9rem;
-  min-height: 320px;
+  min-height: 340px;
+  border-radius: 14px;   /* stands alone now, not clipped by a card wrapper */
 }
 /* Real Everwell brand lockup (light-on-dark logo assets) */
 .project-visual .pv-brand {
@@ -611,14 +678,12 @@ a:hover { color: var(--accent-deep); }
 }
 .carousel-embed iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 3400px;          /* wide enough to show ~3 slides; overflow is clipped */
-  height: 1120px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border: 0;
-  transform: scale(0.17857);   /* 1120px × 0.17857 = 200px tall */
-  transform-origin: top left;
   pointer-events: none;   /* the whole tile is the link */
+  /* the embedded page scales its own slides down — see the carousel's embed CSS */
 }
 .carousel-embed:hover .media-hint,
 .carousel-embed:focus-visible .media-hint { opacity: 1; }
